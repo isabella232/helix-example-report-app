@@ -8,4 +8,7 @@ title: 'Example Annual Report'
 # Specifies the git url to the content repository. helix will use the local directory if
 # not configured.
 #
-contentRepo: https://github.com/namics/helix-example-report-content
+#content: https://github.com/namics/helix-example-report-content.git
+
+# specifies the directory index
+directoryIndex: index.html
