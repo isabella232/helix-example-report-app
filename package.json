@@ -17,11 +17,15 @@
   },
   "homepage": "https://github.com/namics/helix-example-report-app#readme",
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
     "react-dom": "^16.6.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.4.1",
     "create-react-class": "^15.6.3",
     "react": "^16.6.1"
   }

@@ -17,9 +17,11 @@
     <em>generated at ${content.time}</em>
 </div>
 
-<div class="container-fluid">
+<div id="appRoot" class="container-fluid">
     ${content.approot}
 </div>
 
+
+<script src="bundle.js"></script>
 </body>
 </html>

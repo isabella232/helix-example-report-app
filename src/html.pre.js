@@ -1,20 +1,15 @@
+require('babel-register')({
+  presets: ['react']
+});
 
 var React = require('react');
-var createReactClass = require('create-react-class');
 var ReactDOMServer = require('react-dom/server');
-
-
-
-const asd = createReactClass({
-  render: function() {
-      return React.createElement('h1', null, 'Hello World!');
-  }
-});
+var Component = require('./Component.jsx');
 
 function pre(payload) {
   payload.content.time = `${new Date()}`;
   var html = ReactDOMServer.renderToString(
-    React.createElement(asd)
+    React.createElement(Component)
   );
   payload.content.approot = html;
 }
