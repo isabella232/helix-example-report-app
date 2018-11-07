@@ -1,0 +1,28 @@
+{
+  "name": "helix-example-report-app",
+  "version": "1.0.0",
+  "description": "Example Annual Report based on Helix ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namics/helix-example-report-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namics/helix-example-report-app/issues"
+  },
+  "homepage": "https://github.com/namics/helix-example-report-app#readme",
+  "dependencies": {
+    "react-dom": "^16.6.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "create-react-class": "^15.6.3",
+    "react": "^16.6.1"
+  }
+}

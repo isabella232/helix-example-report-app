@@ -17,5 +17,9 @@
     <em>generated at ${content.time}</em>
 </div>
 
+<div class="container-fluid">
+    ${content.approot}
+</div>
+
 </body>
 </html>
