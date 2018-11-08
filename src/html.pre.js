@@ -8,8 +8,12 @@ var Component = require('./Component.jsx');
 
 function pre(payload) {
   payload.content.time = `${new Date()}`;
+  
+  const initialData = payload.content;
+  payload.content.serialized = JSON.stringify(initialData);
+
   var html = ReactDOMServer.renderToString(
-    React.createElement(Component)
+    React.createElement(Component, initialData)
   );
   payload.content.approot = html;
 }

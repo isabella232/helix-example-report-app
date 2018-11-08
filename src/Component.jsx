@@ -7,9 +7,8 @@ module.exports = createReactClass({
   },
   render: function() {
       return (
-          <div>
-              <h1>Hello World!</h1>
-              <p>Isn't server-side rendering remarkable?</p>
+          <div id="appRoot" data-json={this.props.initialData}>
+              <h1>{this.props.title}</h1>
               <button onClick={this._handleClick}>Click Me</button>
           </div>
       );
