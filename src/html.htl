@@ -9,21 +9,26 @@
 </head>
 <body>
 
-<div data-sly-list="${content.children}">
-    <div class="container-fluid">${item}</div>
-</div>
+    <!-- it is important to wrap inside div, else only SUMMARY will be rendered -->
+    <div class="nav">
+        <esi:include src="/HEADER.header.html" />
+    </div>
 
-<div class="container-fluid">
-    <em>generated at ${content.time}</em>
-</div>
+    <div data-sly-list="${content.children}">
+        <div class="container-fluid">${item}</div>
+    </div>
 
-<script id="initial-data" type="text/plain" data-json="${content.serialized}"></script>
+    <div class="container-fluid">
+        <em>generated at ${content.time}</em>
+    </div>
 
-<div class="container-fluid">
-    ${content.approot}
-</div>
+    <script id="initial-data" type="text/plain" data-json="${content.serialized}"></script>
+
+    <div class="container-fluid">
+        ${content.approot}
+    </div>
 
 
-<script src="bundle.js"></script>
+    <script src="bundle.js"></script>
 </body>
 </html>
