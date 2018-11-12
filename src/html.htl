@@ -3,18 +3,26 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <title>${content.title}</title>
     <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<div data-sly-list="${content.children}">
-    <div class="container-fluid">${item}</div>
+<div class="header">
+    <esi:include src="HEADER.header.html" />
+</div>
+    
+<div data-sly-list="${content.sections}">
+    <div class="container-fluid">${item.title}</div>
 </div>
 
-<div class="container-fluid">
-    <em>generated at ${content.time}</em>
+<div class="container-fluid">   
+</div>
+
+<div class="footer">
+    <esi:include src="FOOTER.footer.html" />
 </div>
 
 </body>
