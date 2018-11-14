@@ -2,6 +2,6 @@
 .cache/
 node_modules/
 dist/
-src/bundle.js
+webroot/bundle.js
 pipeline.log
 logs

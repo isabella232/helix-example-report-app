@@ -10,24 +10,26 @@
 <body>
 
     <!-- it is important to wrap inside div, else only SUMMARY will be rendered -->
-    <div class="nav">
+    <div class="header">
         <esi:include src="/HEADER.header.html" />
     </div>
 
-    <div data-sly-list="${content.children}">
-        <div class="container-fluid">${item}</div>
+    <div class="main">
+        <div class="article">
+            <esi:include src="/articles/ARTICLEONE.articleone.html" />
+        </div>
+        <div class="article">
+            <esi:include src="/articles/ARTICLETWO.articletwo.html" />
+        </div>
     </div>
 
-    <div class="container-fluid">
-        <em>generated at ${content.time}</em>
+    <div class="footer">
+        <esi:include src="/FOOTER.footer.html" />
     </div>
 
-    <script id="initial-data" type="text/plain" data-json="${content.serialized}"></script>
-
-    <div class="container-fluid">
-        ${content.approot}
+    <div>
+        ${content.time}
     </div>
-
 
     <script src="bundle.js"></script>
 </body>
