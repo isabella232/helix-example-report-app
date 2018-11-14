@@ -25,6 +25,7 @@ img {
 
 .footer {
     padding-top: 1em;
+    padding-bottom: 0.5em;
     background-color: #006dc765;
 }
 
@@ -41,7 +42,7 @@ img {
 .footer blockquote {
     display: block;
     width: 100%;
-    font-size: 0.7em;
+    font-size: 0.7em;    
 }
 
 .content {

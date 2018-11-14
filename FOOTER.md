@@ -7,4 +7,4 @@
 * [Products and Services] (privacy-policy.md)
 * [Jobs] (privacy-policy.md)
 
-> © Namics. A Merkle Company.
+> © Ekzemplo. An Example Company.
