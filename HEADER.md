@@ -1,5 +1,5 @@
-# Ekzemplo
+# [Ekzemplo] (index.md)
 ## Annual Report
-
-* [Home] (index.md)
-* [Readme] (README.md)
+---
+* [Year in Brief] (year-in-brief.md)
+* [Facts and Figures] (facts-and-figures.md)

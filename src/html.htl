@@ -10,18 +10,15 @@
 </head>
 <body>
 
-<div class="header">
+<div class="container-fluid header">    
     <esi:include src="HEADER.header.html" />
 </div>
     
-<div data-sly-list="${content.sections}">
-    <div class="container-fluid">${item.title}</div>
+<div class="container-fluid content" data-sly-list="${content.children}">
+    <div class="container">${item}</div>
 </div>
 
-<div class="container-fluid">   
-</div>
-
-<div class="footer">
+<div class="container-fluid footer">
     <esi:include src="FOOTER.footer.html" />
 </div>
 

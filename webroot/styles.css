@@ -3,10 +3,48 @@ img {
     max-width: 100%;
 }
 
+.header {
+    box-shadow: 0 1px 5px #000000;
+}
+
 .header h1 {
     font-size: 1em;
+    line-height: 2em;
+    margin-right: 1em;    
 }
 
 .header h2 {
-    font-size: 0.8em;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.header li {
+    display: inline;
+    margin-right: 0.5em;
+}
+
+.footer {
+    padding-top: 1em;
+    background-color: #006dc765;
+}
+
+.footer h2 {
+    font-size: 1em;
+    color: #08102c;
+    display: flex;
+}
+
+.footer ul {
+    list-style-type: none;   
+}
+
+.footer blockquote {
+    display: block;
+    width: 100%;
+    font-size: 0.7em;
+}
+
+.content {
+    margin-top: 3em;
+    margin-bottom: 3em;
 }

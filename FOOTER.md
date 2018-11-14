@@ -1,4 +1,10 @@
+## About this report
 * [Imprint] (inprint.md)
-* [Privacy Policy] (privacy.md)
+* [Privacy Policy] (privacy-policy.md)
 
-© by Namics. A Merkle Company.
+## More about Ekzemplo
+* [Locations] (inprint.md)
+* [Products and Services] (privacy-policy.md)
+* [Jobs] (privacy-policy.md)
+
+> © Namics. A Merkle Company.
