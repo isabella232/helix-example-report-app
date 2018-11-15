@@ -1,3 +1,5 @@
+require('ignore-styles').default(['.sass', '.scss']);
+require('./Article.scss');
 var React = require('react');
 
 class Article extends React.Component {
@@ -19,7 +21,7 @@ class Article extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className="article">
             <h1>{this.props.title}</h1>
             <button onClick={this._handleClick}>Click Me</button>
             <span>{this.state.count}</span>
