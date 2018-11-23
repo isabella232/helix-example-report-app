@@ -27,6 +27,8 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^6.4.1",
     "create-react-class": "^15.6.3",
-    "react": "^16.6.1"
+    "react": "^16.6.1",
+    "webpack": "^2.7.0",
+    "webpack-cli": "^3.1.2"
   }
 }
