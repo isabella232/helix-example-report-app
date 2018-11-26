@@ -4,9 +4,19 @@ Example Annual Report based on Helix
 Quick Start
 ---
 
+Works on my machine using:
+node v8.12.0
+npm v6.4.1
+
+Setup 
+```bash
+$ npm i
+```
+
 To compile the scripts and start the development server do:
 
 ```bash
+$ ./node_modules/webpack/bin/webpack.js
 $ hlx up
 ```
 
