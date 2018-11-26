@@ -16,20 +16,11 @@
     </div>
 
     <div class="main">
-        <div class="article">
-            <esi:include src="/articles/ARTICLEONE.articleone.html" />
-        </div>
-        <div class="article">
-            <esi:include src="/articles/ARTICLETWO.articletwo.html" />
-        </div>
+        ${content.components}
     </div>
 
     <div class="footer">
         <esi:include src="/FOOTER.footer.html" />
-    </div>
-
-    <div>
-        ${content.time}
     </div>
 
     <script src="bundle.js"></script>
