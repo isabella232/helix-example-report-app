@@ -1,1 +1,1 @@
-module.exports.pre = require('./server') ('Footer');
+module.exports.pre = require('./server')('Footer');

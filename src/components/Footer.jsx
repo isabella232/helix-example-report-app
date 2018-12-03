@@ -1,17 +1,12 @@
-var React = require('react');
+const React = require('react');
 
 class Footer extends React.Component {
-    
-    constructor() {
-        super();
-    }
-    
-    render() {
-        return (
-            <div>
+  render() {
+    return (
+      <div>
             Footer
-            </div>
-        );
-    };
+      </div>
+    );
+  }
 }
 module.exports = Footer;

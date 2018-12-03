@@ -1,9 +1,9 @@
 module.exports = () => ({
-    component: "Text",
-    test(section) {
-        return true;
-    },
-    modify(section) {
-        return null;
-    }
+  component: 'Text',
+  test() {
+    return true;
+  },
+  modify() {
+    return null;
+  },
 });

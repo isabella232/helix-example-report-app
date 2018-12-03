@@ -1,1 +1,1 @@
-module.exports.pre = require('./server') ('Header');
+module.exports.pre = require('./server')('Header');

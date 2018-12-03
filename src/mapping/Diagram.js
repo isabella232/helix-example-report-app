@@ -15,61 +15,64 @@ Example:
 const headRegExp = /^(.*?)\s*\(\s*([XYxy])\s*(?::(.+?))?\s*\)$/;
 
 function getHeader(table) {
-    return table.children[0].children
-        .map(({children: [{value}]}) => value.trim())
-        .map((key, col) => [headRegExp.exec(key), col])
-        .filter(([h]) => h != null)
-        .map(([[, caption, key, label = caption], col]) => ({
-            key: key.toUpperCase(), label, column: col
-        }))
-        .reduce((o, {key, label, column}) => Object.assign(o, {[key]: {label, column}}), {});
+  return table.children[0].children
+    .map(({ children: [{ value }] }) => value.trim())
+    .map((key, col) => [headRegExp.exec(key), col])
+    .filter(([h]) => h)
+    .map(([[, caption, key, label = caption], col]) => ({
+      key: key.toUpperCase(), label, column: col,
+    }))
+    .reduce((o, { key, label, column }) => Object.assign(o, { [key]: { label, column } }), {});
 }
 
 module.exports = () => ({
-    component: "Diagram",
-    debug: true,
-    test({children: [table, title = null, ...rest]}) {
+  component: 'Diagram',
+  debug: true,
+  test({ children: [table, title = null, ...rest] }) {
 
-        if (rest.length === 0 &&
-            table.type === "table" &&
-            (title == null || title.type === "blockquote")) {
-            let header = getHeader(table);
-            return header.hasOwnProperty("X") && header.hasOwnProperty("Y");
-        }
-        return false;
-    },
-    modify({
-               children: [
-                   table,
-                   {children: [{children: [{value: Title = null} = {}] = []} = {}] = []} = {}
-               ]
-           }) {
-        const header = getHeader(table);
+    if (rest.length === 0 &&
+            table.type === 'table' &&
+            (!title || title.type === 'blockquote')) {
+      const header = getHeader(table);
+      return Object.prototype.hasOwnProperty.call(header, 'X') && Object.prototype.hasOwnProperty.call(header, 'Y');
+    }
+    return false;
+  },
+  modify({
+    children: [
+      table,
+      { children: [{ children: [{ value: Title = null } = {}] = [] } = {}] = [] } = {},
+    ],
+  }) {
+    const header = getHeader(table);
 
-        const rawData = table.children.map(({children}) => children.map(({children: [{value = ""} = {}] = []}) => value));
+    const rawData = table.children.map(
+      ({ children }) => children.map(({ children: [{ value = '' } = {}] = [] }) => value)
+    );
 
-        const htmlTable = `
+    const htmlTable = `
         <table>
             <thead>
-                <tr>${rawData[0].map(d => `<th>${d}</th>`).join("\n")}</tr>
+                <tr>${rawData[0].map((d) => `<th>${d}</th>`).join('\n')}</tr>
             </thead>
             <tbody>
-                ${rawData.slice(1).map(row => `<tr>${row.map(d => `<td>${d}</td>`).join("\n")}</tr>`).join("\n")}
+                ${rawData.slice(1).map((row) => `<tr>${row.map((d) => `<td>${d}</td>`).join('\n')}</tr>`).join('\n')}
             </tbody>
         </table>
         `;
 
 
-        return {
-            Title,
-            Table: htmlTable,
-            Data: rawData.slice(1).map(row => [row[header.X.column], row[header.Y.column]].map(x => parseFloat(x))).map(([X, Y]) => ({
-                X,
-                Y
-            })),
-            Axis: Object
-                .entries(header)
-                .reduce((o, [key, {label}]) => Object.assign(o, {[key]: label}), {})
-        };
-    }
+    return {
+      Title,
+      Table: htmlTable,
+      Data: rawData.slice(1).map(
+        (row) => [row[header.X.column], row[header.Y.column]].map((x) => parseFloat(x))).map(([X, Y]) => ({
+        X,
+        Y,
+      })),
+      Axis: Object
+        .entries(header)
+        .reduce((o, [key, { label }]) => Object.assign(o, { [key]: label }), {}),
+    };
+  },
 });

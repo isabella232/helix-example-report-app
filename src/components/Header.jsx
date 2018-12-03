@@ -1,17 +1,12 @@
-var React = require('react');
+const React = require('react');
 
 class Header extends React.Component {
-    
-    constructor() {
-        super();
-    }
-    
-    render() {
-        return (
-            <div>
+  render() {
+    return (
+      <div>
             HEADER
-            </div>
-        );
-    };
+      </div>
+    );
+  }
 }
 module.exports = Header;
