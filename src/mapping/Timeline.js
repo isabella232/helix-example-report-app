@@ -17,7 +17,7 @@ Example:
 
 module.exports = () => ({
   component: 'TimeLine',
-  debug: true,
+  debug: false,
   test({ children: [{ children, type, ordered = false }, ...rest] }) {
     return rest.length === 0 &&
             type === 'list' &&

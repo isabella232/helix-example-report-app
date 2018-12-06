@@ -3,7 +3,6 @@ require('babel-register')({
 });
 
 const components = require('./mapping');
-
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 
@@ -24,12 +23,9 @@ function findComponent(section) {
                       ${JSON.stringify(props)}
                     </script>
               `;
-
       return dataHTML + ReactDOMServer.renderToString(
         React.createElement(Component, props)
       );
-
-
     }
   }
 }

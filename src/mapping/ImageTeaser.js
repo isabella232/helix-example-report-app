@@ -7,7 +7,7 @@ Text
 
 module.exports = () => ({
   component: 'ImageTeaser',
-  debug: true,
+  debug: false,
   test({
     children: [
       { type: paragraph, children: [

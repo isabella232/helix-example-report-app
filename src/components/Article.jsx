@@ -1,5 +1,3 @@
-require('ignore-styles').default(['.sass', '.scss']);
-require('./Article.scss');
 const PropTypes = require('prop-types');
 const React = require('react');
 

@@ -24,5 +24,6 @@ module.exports = {
     "module": false,
     "process": false,
     "require": false,
+    "__dirname": false,
   }
 }

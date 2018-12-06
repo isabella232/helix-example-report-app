@@ -27,7 +27,7 @@ function getHeader(table) {
 
 module.exports = () => ({
   component: 'Diagram',
-  debug: true,
+  debug: false,
   test({ children: [table, title = null, ...rest] }) {
 
     if (rest.length === 0 &&
