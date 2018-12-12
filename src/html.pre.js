@@ -27,7 +27,7 @@ function findComponent(section) {
                     </script>
               `;
       return dataHTML + ReactDOMServer.renderToString(
-        React.createElement(Component, props)
+        React.createElement('div', null, React.createElement(Component, props))
       );
     }
   }

@@ -20,7 +20,7 @@ module.exports = function (componentName) {
     `;
 
     const appHTML = ReactDOMServer.renderToString(
-      React.createElement(Component, payload.content)
+      React.createElement('div', null, React.createElement(Component, payload.content))
     );
 
     // required for the react client code
