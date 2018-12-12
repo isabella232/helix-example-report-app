@@ -2,6 +2,9 @@ require('babel-register')({
   presets: ['react'],
 });
 
+// used to ignore css imports on the server
+require('ignore-styles');
+
 module.exports = function (componentName) {
 
   const React = require('react');

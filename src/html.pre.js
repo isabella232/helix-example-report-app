@@ -2,6 +2,9 @@ require('babel-register')({
   presets: ['react'],
 });
 
+// used to ignore css imports on the server
+require('ignore-styles');
+
 const components = require('./mapping');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
