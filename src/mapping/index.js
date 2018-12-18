@@ -18,5 +18,6 @@ module.exports = [
   require('./ImageTeaser')(helper),
   require('./Diagram')(helper),
   require('./Timeline')(helper),
-  require('./Text')(helper),
+  require('./Header')(helper),
+  require('./Footer')(helper),
 ];
