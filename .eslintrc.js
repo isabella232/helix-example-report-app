@@ -6,6 +6,7 @@ module.exports = {
     "indent": [2, 2],
     "no-alert": [1],
     "no-console": [1],
+    "no-continue": [1],
     "react/prefer-stateless-function": [0],
     "react/jsx-indent": [2, 2],
     "react/jsx-indent-props": [2, 2],

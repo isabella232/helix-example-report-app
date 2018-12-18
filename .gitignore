@@ -6,3 +6,4 @@ webroot/bundle.js
 webroot/bundle.css
 pipeline.log
 logs
+.DS_Store
