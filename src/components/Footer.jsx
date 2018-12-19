@@ -10,7 +10,35 @@ class Footer extends React.Component {
           <Row>
             <Col>
               <div>
-                    Footer
+                <h4>Information</h4>
+                <ul>
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                </ul>
+              </div>
+            </Col>
+            <Col>
+              <div>
+                <h4>References</h4>
+                <ul>
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                  <li><a href="#">Four</a></li>
+                  <li><a href="#">Five</a></li>
+                </ul>
+              </div>
+            </Col>
+            <Col>
+              <div>
+                <h4>Partners</h4>
+                <ul>
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                  <li><a href="#">Four</a></li>
+                </ul>
               </div>
             </Col>
           </Row>

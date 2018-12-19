@@ -8,7 +8,7 @@ class ImageTeaser extends React.Component {
     return (
       <Container>
         <Row>
-          <Col>
+          <Col sm="6">
             <Card>
               <CardImg
                 top width="100%"
