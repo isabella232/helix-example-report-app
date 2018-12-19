@@ -1,0 +1,10 @@
+@import "../html";
+
+.footer-bg {
+  background-color: $table-dark-bg;
+  
+  .footer {
+    color: $table-dark-color;
+    padding: $component-padding;
+  }
+}

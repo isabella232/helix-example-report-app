@@ -10,6 +10,7 @@ module.exports = {
     "react/prefer-stateless-function": [0],
     "react/jsx-indent": [2, 2],
     "react/jsx-indent-props": [2, 2],
+    "react/jsx-handler-names": [1],
     "require-jsdoc": ["error", {
       "require": {
           "FunctionDeclaration": false,

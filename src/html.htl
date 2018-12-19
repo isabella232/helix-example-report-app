@@ -10,7 +10,7 @@
 <body>
 
     <!-- it is important to wrap inside div, else only SUMMARY will be rendered -->
-    <div class="header">
+    <div>
         <esi:include src="/HEADER.header.html" />
     </div>
 
@@ -18,7 +18,7 @@
         ${content.components}
     </div>
 
-    <div class="footer">
+    <div>
         <esi:include src="/FOOTER.footer.html" />
     </div>
 
